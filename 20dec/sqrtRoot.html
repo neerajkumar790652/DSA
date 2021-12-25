@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sqrtRoot</title>
+</head>
+<body>
+    <script>
+let x = 121;
+function sqrtRoot(x){
+    let start=0;
+    let end = x;
+    while(start<=end){
+        let mid = Math.floor(start+(end-start)/2);
+        if(mid*mid==x){
+            return mid;
+        }
+        else if(mid*mid>x){
+            end=mid-1;
+        }
+        else{
+            start=mid+1;
+
+        }
+    }
+    return end;
+}
+document.write("the square root of"+" "+x+" is"+" "+sqrtRoot(x))
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binarySearch</title>
+</head>
+<body>
+        <script>
+           
+           
+      
+        let arr = [-1,0,3,5,9,12]
+       let  target = 5;
+         let end = arr.length;
+         let start = 0;
+        document.write(target + " exist in arr and its index is " + binarySearch(arr,start,end,target))
+        function binarySearch(arr,start,end,target){
+            for( let i = 0;i<arr.length;i++){
+            
+                if(arr[i]==target){
+                   
+                    while(start<=end){
+                let mid = Math.floor(start+(end-start)/2);
+                if(arr[mid]==target){
+                    return mid;
+                    break;
+
+                }
+                if(arr[mid]>target){
+                    end = mid-1;
+                }
+                else{
+                    start = mid+1;
+                }
+            } 
+        }
+      
+    }
+}
+
+
+    </script>
+    
+</body>
+</html>
