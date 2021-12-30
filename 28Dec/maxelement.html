@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the maximum element of given Array</h1>
+    <script>
+        function maximum(array,n)
+        {
+            if (n == 1)
+                return array[0];
+            
+            return Math.max(array[n - 1],
+                maximum(array, n - 1));
+        }
+        let array = [ 1,-1,0,2,-2,3,-3,4,-4 ];
+        let n = array.length;
+        document.write( "the maximum element of given array is"+" "+ maximum(array, n));
+        </script>
+        
+    
+    
+</body>
+</html>
