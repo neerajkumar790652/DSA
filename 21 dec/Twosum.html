@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two sum</title>
+</head>
+<body>
+    <script>
+        function twoSum(array,target){
+            let len = array.length;
+            for(let i=0;i<len;i++){
+                for(let j=i+1;j<len;j++){
+                    if(array[i]+array[j]===target){
+                        return[i+1,j+1];
+                    }
+                }
+            }
+        }
+        let array=[2,7,11,15];
+       let target =9;
+        document.write("the one increment index of sum of" +" "+target+" "+"is "+" "+twoSum(array,target));
+    </script>
+    
+</body>
+</html>
